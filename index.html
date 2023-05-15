@@ -207,17 +207,28 @@
   </section>
 
 
-  <!-- Call to Action -->
+   <!-- Call to Action -->
+<section class="colored-section" id="cta">
+  <div class="container-fluid">
+    <h3 class="big-heading">Time to Take Back your Emotional Health.</h3>
+    <button type="button" class="btn btn-outline-light btn-lg download-button" onclick="showQRCode()">Scan the QR code to try now</button>
+  </div>
+</section>
 
-  <section class="colored-section" id="cta">
+<div id="qr-code-popup" style="display: none;">
+  <img src="images/qr-code.png" alt="QR Code">
+  <button type="button" class="close" onclick="hideQRCode()">Close</button>
+</div>
 
-    <div class="container-fluid">
+<script>
+function showQRCode() {
+  document.getElementById("qr-code-popup").style.display = "block";
+}
 
-      <h3 class="big-heading">Time to Take Back your Emotional Health.</h3>
-      <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa fa-qrcode"></i> Scan the QR code to try now</button>
-    </div>
-  </section>
-
+function hideQRCode() {
+  document.getElementById("qr-code-popup").style.display = "none";
+}
+</script>
 
   <!-- Footer -->
 
