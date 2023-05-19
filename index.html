@@ -77,14 +77,14 @@
 </style>
 
 
-      <!-- Title -->
+     <!-- Title -->
       
       <div class="row">
 
         <div class="col-lg-6">
           <h1 class="big-heading">Meet Orlo - Friendly Support Companion</h1>
           
-          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa fa-qrcode"></i> Scan the QR code to try now</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button" onclick="showQRCode()">Scan the QR code to try now</button>
         </div>
 
         <div class="col-lg-6">
@@ -95,8 +95,23 @@
 
     </div>
 
-  </section>
+    <section class="colored-section" id="qr-code"></section>
 
+  </section>
+  <div id="qr-code-popup" style="display: none;">
+    <img src="images/qr-code.png" alt="QR Code">
+    <button type="button" class="close" onclick="hideQRCode()">Close</button>
+  </div>
+  
+  <script>
+  function showQRCode() {
+    document.getElementById("qr-code-popup").style.display = "block";
+  }
+  
+  function hideQRCode() {
+    document.getElementById("qr-code-popup").style.display = "none";
+  }
+  </script>
 
   <!-- Features -->
 
@@ -229,7 +244,7 @@
   </section>
 
 
-   <!-- Call to Action -->
+ <!-- Call to Action -->
 <section class="colored-section" id="cta">
   <div class="container-fluid">
     <h3 class="big-heading">Time to Take Back your Emotional Health.</h3>
@@ -237,14 +252,20 @@
   </div>
 </section>
 
+<section>
+  
+</section>
+
 <div id="qr-code-popup" style="display: none;">
   <img src="images/qr-code.png" alt="QR Code">
-  <button type="button" class="close" onclick="hideQRCode()">Close</button>
 </div>
+
+
 
 <script>
 function showQRCode() {
   document.getElementById("qr-code-popup").style.display = "block";
+  document.getElementById("qr-code-popup").scrollIntoView({behavior: "smooth"});
 }
 
 function hideQRCode() {
