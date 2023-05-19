@@ -84,12 +84,11 @@ p {
 /* Title Image */
 
 .title-image {
-  width: 50%;
-  transform: rotate(25deg);
+  width: 40%;
+  
   position: absolute;
-  right: 30%;
+  right: 0%;
 }
-
 /* Features Section */
 
 #features {
